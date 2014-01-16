@@ -34,6 +34,9 @@ class Generator(object):
         field_name = field.name
         return field.model.objects.filter(**{field_name: val}).count() == 0
 
+    def _generate_bitfield(self, instance, field):
+        return int(sum([math.pow(2, j) for j in range(1, random.randint(1,9))]))
+
     def _generate_foreignkey(self, instance, field):
         klass = field.related.parent_model
         instance = None
