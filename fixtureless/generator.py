@@ -120,6 +120,9 @@ class Generator(object):
     def _generate_datefield(self, instance, field):
         return datetime.date.today()
 
+    def _generate_timefield(self, instance, field):
+        return datetime.datetime.today().time()
+
     def _get_integer_limits(self, field, connection_obj=connection):
         conn_type = field.db_type(connection_obj)
         if conn_type.startswith('integer') or conn_type.startswith('serial'):
