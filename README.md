@@ -33,7 +33,7 @@ Install
 
 django-fixtureless is registered with Pypi and can be installed using `pip`.
 
-    pip install django-fixtureless
+    pip install -e git+https://github.com/akashdeep007/django-fixtureless.git#egg=django-fixtureless
 
 
 Releases and Branches
